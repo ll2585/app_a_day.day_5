@@ -2,27 +2,17 @@ package com.lukeli.appaday.day5;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.graphics.Color;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.logging.Handler;
 
 
 public class StartGameActivity extends Activity {
@@ -39,7 +29,6 @@ public class StartGameActivity extends Activity {
         setContentView(R.layout.start_game_layout);
         desiredRole = Roles.DESIRED_ROLE_STRING[desiredIndex];
         yourName = getIntent().getExtras().getString("players_name");
-        Toast.makeText(this, yourName, Toast.LENGTH_SHORT).show();
         generateRoles();
     }
 
@@ -113,11 +102,6 @@ public class StartGameActivity extends Activity {
         for(String id : playerIDs){
             userIDTextMap.get(id).setBackgroundColor (Color.RED);
         }
-        /**
-         Toast.makeText(MainActivity.this, knowledge, Toast.LENGTH_SHORT).show();
-         for (String id : playerIDs) {
-         userIDTextMap.get(id).setBackgroundColor(Color.TRANSPARENT);
-         }**/
         AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
         builder.setTitle("Your Info");
         builder.setMessage(knowledge);

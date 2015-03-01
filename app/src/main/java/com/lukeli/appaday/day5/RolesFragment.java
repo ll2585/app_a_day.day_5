@@ -7,9 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class RolesFragment extends ListFragment{
     boolean is_horizontal;
@@ -51,6 +49,7 @@ public class RolesFragment extends ListFragment{
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("selected_index", current_role_selected);
+        ((SelectRoleActivity) getActivity()).setSelectedIndex(current_role_selected);
     }
 
     @Override

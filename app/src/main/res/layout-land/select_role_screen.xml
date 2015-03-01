@@ -1,0 +1,29 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <fragment class="com.lukeli.appaday.day5.RolesFragment"
+        android:id="@+id/roles"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight = "1"
+        />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/role_description"
+        android:layout_weight = "3">
+
+        </FrameLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_role_text"
+        android:id="@+id/start_button"/>
+</LinearLayout>
